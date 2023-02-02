@@ -1,0 +1,16 @@
+/* default fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@400;500;600&display=swap');
+@font-face {
+ font-family: berlinSansFB;
+ src: url(/Font/Berlin\ Sans\ FB\ Regular.ttf);
+}
+
+/* custom colors */
+:root {
+ --dark:#212121;
+ --white:#FFFFFF;
+ --customBrown:rgba(154, 115, 15, 1);
+ --customLightBrown:rgba(154, 115, 15, 0.35);
+ --customBlue:rgba(42, 59, 144, 1);
+}
+
