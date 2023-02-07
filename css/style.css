@@ -11,8 +11,12 @@
  padding: 0;
  box-sizing: border-box;
 }
+/* helper class */
 .font-1 {
  font-family: berlinSansFB;
+}
+.brown {
+ color: var(--customBrown);
 }
 /* custom colors */
 :root {
@@ -53,6 +57,10 @@ transition: 0.2s;
  background-color: var(--customDarkBlue);
 }
 
+.btn-mobile {
+ display: none;
+}
+
 .hamburger {
  display: none;
 }
@@ -77,6 +85,13 @@ transition: 0.2s;
  color: var(--customBlue);
  font-size: 1rem;
 }
+
+.hr::before {
+ content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+ padding: 10px;
+ text-decoration: underline;
+}
+
 /***** Mobile nav *****/
 @media screen and (max-width: 960px) {
  .header {
@@ -85,8 +100,12 @@ transition: 0.2s;
  .logo {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
  }
+ 
  .button {
   display: none;
+ }
+ .btn-mobile {
+  display: block;
  }
  .hamburger {
   display: block;
