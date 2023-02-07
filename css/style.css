@@ -5,6 +5,15 @@
  src: url(/Font/Berlin\ Sans\ FB\ Regular.ttf);
 }
 
+/* defaults */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+.font-1 {
+ font-family: berlinSansFB;
+}
 /* custom colors */
 :root {
  --dark:#212121;
@@ -12,5 +21,120 @@
  --customBrown:rgba(154, 115, 15, 1);
  --customLightBrown:rgba(154, 115, 15, 0.35);
  --customBlue:rgba(42, 59, 144, 1);
+ --customDarkBlue: rgba(48, 60, 122, 1);
 }
 
+
+.header {
+ height: 100px;
+}
+
+a {
+ text-decoration: none;
+ font-family: 'Inter', sans-serif;
+ font-weight: 400;
+ font-size: 14px;
+}
+
+.logo {
+ color: var(--customBlue);
+ font-family: berlinSansFB;
+}
+
+.button {
+background-color: var(--customBlue);
+color: var(--white);
+padding: 15px 20px;
+border-radius: 50px;
+transition: 0.2s;
+}
+
+.button:hover {
+ background-color: var(--customDarkBlue);
+}
+
+.hamburger {
+ display: none;
+}
+
+.nav_bar .nav_menu {
+ display: flex;
+ list-style: none;
+ margin-bottom: 0;
+}
+
+.nav_link {
+ display: block;
+ color: var(--dark);
+ padding: 10px 25px;
+ border-radius: 50px;
+ font-weight: 500;
+ transition: 0.2s;
+ margin: 0 5px;
+}
+
+.nav_link:hover {
+ color: var(--customBlue);
+ font-size: 1rem;
+}
+/***** Mobile nav *****/
+@media screen and (max-width: 960px) {
+ .header {
+  background-color: var(--customBlue);
+ }
+ .logo {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+ }
+ .button {
+  display: none;
+ }
+ .hamburger {
+  display: block;
+  cursor: pointer;
+ }
+ .hamburger .line {
+  width: 26px;
+  height: 2px;
+  background-color: var(--white);
+  transform-origin: 5 0;
+  margin-bottom: 5px;
+  transition: all 0.4s ease-out;
+ }
+ .hamburger.active .line:first-child {
+   transform: rotate(45deg) translate(5px, 3px);
+  }
+ .hamburger.active .line:nth-child(2) {
+    opacity: 0;
+   }
+  .hamburger.active .line:last-child {
+    transform: rotate(-45deg) translate(7px, -6px);
+   }
+ .nav_bar.active {
+  height: 100vh;
+ }
+ .nav_bar {
+  height: 0;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--white);
+  transition: 0.4s;
+  overflow: hidden;
+ }
+ .nav_bar .nav_menu {
+  display: block;
+  width: fit-content;
+  margin: 80px auto 0;
+  text-align: center;
+  transition: 0.5s;
+  opacity: 0;
+ }
+  .nav_bar.active .nav_menu {
+   opacity: 1;
+  }
+  .nav_link {
+   margin-bottom: 12px;
+  }
+}
