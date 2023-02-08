@@ -1,5 +1,5 @@
 /* default fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@400;500;600&display=swap');
 @font-face {
  font-family: berlinSansFB;
  src: url(/Font/Berlin\ Sans\ FB\ Regular.ttf);
@@ -10,6 +10,10 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
 }
 /* helper class */
 .font-1 {
@@ -91,6 +95,36 @@ transition: 0.2s;
  padding: 10px;
  text-decoration: underline;
 }
+/* counter styles */
+.counter-body {
+  background-color: var(--customLightBrown);
+}
+main {
+  overflow: hidden;
+}
+.counter-box p{
+  font-size: 1rem;
+}
+.icon-box {
+  border: 1px solid var(--white);
+  height: 5rem;
+  width: 5rem;
+  margin: 3rem auto;
+  transform: rotate(45deg);
+}
+.icon-box .bi {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 1rem auto;
+  color: var(--customBlue);
+  transform: rotate(-45deg);
+}
+.counter-box .counter {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+
 
 /***** Mobile nav *****/
 @media screen and (max-width: 960px) {
