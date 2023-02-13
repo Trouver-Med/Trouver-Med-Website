@@ -25,6 +25,7 @@ body {
 .brown {
  color: var(--customBrown);
 }
+
 .space {
   margin-bottom: 10rem;
 }
@@ -187,10 +188,62 @@ main {
 .li {
   padding-bottom: 1.5rem;
 }
+/* Carousel style */
+.carousel .carousel-indicators .active {
+  background-color: var(--customBrown);
+}
+
+.carousel .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.underline {
+  background: var(--customBrown);
+  position: relative;
+  height: 4px;
+  width: 100px;
+  border-radius: 4px;
+}
+.underline:before {
+  content: '';
+  background: var(--customBlue);
+  width: 50%;
+  height: 4px;
+  border-radius: 4px;
+  position: absolute;
+}
+.testimony {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: rgba(122, 122, 122, 1);
+}
+.names {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: var(--customBlue);
+}
+/* end of carousel */
+/* Reveal fadeUp animation on page */
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+.reveal.showup {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 
 /***** Mobile nav *****/
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
  .header {
   background-color: var(--customBlue);
  }
@@ -216,17 +269,17 @@ main {
   margin-bottom: 5px;
   transition: all 0.4s ease-out;
  }
- .hamburger.active .line:first-child {
+ .hamburger.open .line:first-child {
    transform: rotate(45deg) translate(5px, 3px);
   }
- .hamburger.active .line:nth-child(2) {
+ .hamburger.open .line:nth-child(2) {
     opacity: 0;
    }
-  .hamburger.active .line:last-child {
+  .hamburger.open .line:last-child {
     transform: rotate(-45deg) translate(7px, -6px);
    }
- .nav_bar.active {
-  height: 100vh;
+ .nav_bar.open {
+  height: 34rem;
  }
  .nav_bar {
   height: 0;
@@ -247,7 +300,7 @@ main {
   transition: 0.5s;
   opacity: 0;
  }
-  .nav_bar.active .nav_menu {
+  .nav_bar.open .nav_menu {
    opacity: 1;
   }
   .nav_link {
