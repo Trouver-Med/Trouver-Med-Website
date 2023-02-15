@@ -8,6 +8,7 @@
  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
  <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
  <link rel="stylesheet" href="/css/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
  <title>Trouver Med</title>
 </head>
 
@@ -83,7 +84,7 @@
       <div class="icon-box">
        <i class="bi bi-geo-alt-fill"></i>
       </div>
-      <p class="counter">5+</p>
+      <p class="counter">5</p>
       <p>State Coverage</p>
      </div>
 
@@ -91,7 +92,7 @@
       <div class="icon-box">
        <i class="bi bi-emoji-smile-fill"></i>
       </div>
-      <p class="counter">5+</p>
+      <p class="counter">10</p>
       <p>Client Satisfaction</p>
      </div>
 
@@ -99,7 +100,7 @@
       <div class="icon-box">
        <i class="bi bi-person-fill-check"></i>
       </div>
-      <p class="counter">5+</p>
+      <p class="counter">5</p>
       <p>Expert Consultant</p>
      </div>
     </div>
@@ -281,6 +282,16 @@
 
 
  <script src="/js/main.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+ <script src="/js/jquery.counterup.min.js"></script>
+ <script>
+  jQuery(document).ready(function($){
+    $('.counter').counterUp({
+      delay: 10,
+      time: 1000
+    });
+  });
+ </script>
  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
  <script>
   $('.w-nav-menu').on('click', 'a', function () {
