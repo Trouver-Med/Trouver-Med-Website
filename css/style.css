@@ -289,6 +289,7 @@ main {
   right: 0;
   width: 100%;
   background-color: var(--white);
+  z-index: 1;
   transition: 0.4s;
   overflow: hidden;
  }
