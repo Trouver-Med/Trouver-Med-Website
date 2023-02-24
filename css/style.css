@@ -97,7 +97,7 @@ transition: 0.2s;
   padding: 15px 20px;
   border-radius: 50px;
   text-align: center;
-  outline: 1px solid var(--customBlue);
+  border: 1px solid var(--customBlue);
   transition: 0.2s;
 }
 .button-2:hover{
