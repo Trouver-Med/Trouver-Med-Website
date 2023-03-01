@@ -279,7 +279,7 @@ main {
     transform: rotate(-45deg) translate(7px, -6px);
    }
  .nav_bar.open {
-  height: 34rem;
+  height: 100vh;
  }
  .nav_bar {
   height: 0;
@@ -289,12 +289,13 @@ main {
   right: 0;
   width: 100%;
   background-color: var(--white);
-  z-index: 1;
+  z-index: 9999;
   transition: 0.4s;
   overflow: hidden;
  }
  .nav_bar .nav_menu {
   display: block;
+  min-height: 100vh;
   width: fit-content;
   margin: 80px auto 0;
   text-align: center;
